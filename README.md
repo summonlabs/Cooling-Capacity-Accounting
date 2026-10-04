@@ -6,11 +6,6 @@ installed thermal-removal capability exists, how much of it is allocatable,
 withheld, degraded, unavailable, indeterminate or unexplained, by zone, loop and
 equipment class, and what evidence makes each of those numbers authoritative.
 
-**DCCP position.** Data Center Control Plane, Tranche 2 - facility capacity and
-placement. DCCP is the facility-wide composition and authority layer above
-Accelerated Systems Infrastructure (ASI) and Distributed Fabric Infrastructure
-(DFI).
-
 * Portable C++20 library, CMake, no third-party dependencies, no network access.
 * Exact integer accounting in canonical fixed units; no floating point takes part
   in any accounting figure, comparison or boundary.
@@ -57,7 +52,7 @@ than it is.
 
 | Area | Owner |
 | --- | --- |
-| Facility-level allocatable thermal-removal capacity, admission and placement inputs | Tranche 2 **Cooling Capacity** |
+| Facility-level allocatable thermal-removal capacity, admission and placement inputs | **Cooling Capacity** |
 | Facility capacity reservations | Facility Capacity Reservation |
 | Placement and selection decisions | Facility Placement Planner |
 | Cooling actuation, setpoints, valves, pumps | cooling control planes, BMS/DCIM, plant controllers |
@@ -69,7 +64,7 @@ than it is.
 | Network topology, paths, transport, congestion, federation | DFI |
 
 This repository owns the **constituent accounting surface beneath and alongside**
-the Tranche 2 Cooling Capacity allocator. It does not reimplement that allocator:
+the Cooling Capacity allocator. It does not reimplement that allocator:
 it publishes accounting generations and evidence that a higher layer can consume.
 
 The library reads no sensor, writes no setpoint, opens no network connection and
